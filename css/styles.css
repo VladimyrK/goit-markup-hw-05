@@ -416,7 +416,7 @@ img {
   justify-content: space-between;
   margin-top: 16px;
 }
-.icon-circle {
+.icon-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,23 +424,20 @@ img {
   height: 44px;
   border-radius: 50%;
 }
-.team-icon-circle {
+.team-icon-link {
   background-color: var(--primary-bg-color);
+  fill: var(--team-icon-color);
 
-  transition: background-color var(--animation);
+  transition: fill var(--animation), background-color var(--animation);
 }
-.team-icon-link:hover .team-icon-circle,
-.team-icon-link:focus .team-icon-circle {
+
+.team-icon-link:hover,
+.team-icon-link:focus {
   background-color: var(--secondary-color);
 }
 
-.team-icon {
-  fill: var(--team-icon-color);
-
-  transition: fill var(--animation);
-}
-.team-icon-link:hover .team-icon,
-.team-icon-link:focus .team-icon {
+.team-icon-link:hover,
+.team-icon-link:focus {
   fill: var(--primary-bg-color);
 }
 
@@ -527,7 +524,8 @@ img {
   justify-content: start;
   margin-left: 70px;
 }
-.join-title {
+
+.join-appeal {
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
@@ -536,22 +534,22 @@ img {
 
   color: #ffffff;
 }
+
 .join-icons-wrap {
   display: flex;
 }
-.join-icon-circle {
+.join-icon-link {
   background-color: var(--join-icon-circle-color);
+  fill: var(--primary-bg-color);
 
   transition: background-color var(--animation);
 }
-.join-icon {
-  fill: var(--primary-bg-color);
-}
+
 .join-icons-wrap-item:not(:last-child) {
   margin-right: 10px;
 }
-.join-icon-link:hover .join-icon-circle,
-.join-icon-link:focus .join-icon-circle {
+.join-icon-link:hover,
+.join-icon-link:focus {
   background-color: var(--secondary-color);
 }
 
@@ -646,10 +644,14 @@ img {
   color: var(--primary-bg-color);
   background-color: var(--portfolio-overlay-bg);
 
+  opacity: 0;
+
   transform: translateY(100%);
   transition: transform var(--animation);
 }
-.portfolio-list-link:hover .portfolio-overlay-content {
+.portfolio-list-link:hover .portfolio-overlay-content,
+.portfolio-list-link:focus .portfolio-overlay-content {
+  opacity: 1;
   transform: translateY(0);
 }
 .portfolio-list-title {
