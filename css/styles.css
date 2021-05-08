@@ -488,6 +488,7 @@ img {
 }
 .footer.container {
   display: inline-flex;
+  align-items: baseline;
 }
 /* Контакты */
 .footer .logo {
